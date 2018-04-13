@@ -1,0 +1,81 @@
+<!doctype html>
+
+<!--
+This file is part of BollMap.
+Copyright 2018 Olle Eriksson
+Licence: MIT. See https://opensource.org/licenses/MIT.
+-->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BollMap</title>
+        
+        <link rel="stylesheet" type="text/css" href="css/theme.css">
+        
+        <script src="js/main.js"></script>
+        <script src="js/input.js"></script>
+        <script src="js/map_info.js"></script>
+        <script src="js/util.js"></script>
+        
+    </head>
+    <body onload="init();">
+        
+        <canvas id="mapCanvas"></canvas>
+        
+        <div id="toolbox">
+            <br>
+            <input type="button" class="tool toggleable" id="pan" value="Pan">
+            <input type="button" class="tool" id="zoomIn" value="Zoom in">
+            <input type="button" class="tool" id="zoomOut" value="Zoom out">
+            <input type="button" class="tool toggleable" id="zoomBox" value="Box zoom">
+            <input type="button" class="tool" id="zoomReset" value="Reset zoom">
+            <input type="button" class="tool toggleable" id="delete" value="Delete">
+            <input type="button" class="tool toggleable" id="move" value="Move">
+            <input type="button" class="tool toggleable" id="rotate" value="Rotate">
+            <input type="button" class="tool toggleable" id="draw" value="Draw &#x270E">
+            <input type="color" class="tool" id="colorSelector">
+            <select class="tool" id="mapList">
+                <option id="mercator">Mercator</option>
+            </select>
+            <div class="coordinate center" id="latitude">...</div>
+            <div class="coordinate center" id="longitude">...</div>
+        </div>
+        
+        <div id="footer">
+            <div class="row center">
+                ^^^^
+            </div>
+            <hr>
+            <div class="row">
+                <div class="column">
+                    <div class="center">About BollMap</div>
+                    <dl>
+                        <dt>Author</dt>
+                        <dd><a href="https://github.com/O-Boll">Olle Eriksson</a></dd>
+                        <dt>Github</dt></dd>
+                        <dd><a href="https://github.com/O-Boll/BollMap">https://github.com/O-Boll/BollMap</a></dd>
+                        <dt>License</dt></dd>
+                        <dd><a href="https://opensource.org/licenses/MIT">MIT</a></dd>
+                    </dl>
+                </div>
+                <div class="column">
+                    <div class="center">Current map image</div>
+                    <dl>
+                        <dt>Author</dt>
+                        <dd><a id="authorInfo"></a></dd>
+                        <dt>File</dt></dd>
+                        <dd><a id="fileInfo"></a></dd>
+                        <dt>License</dt></dd>
+                        <dd><a id="licenseInfo"></a></dd>
+                        <dt>Created</dt></dd>
+                        <dd><a id="createdInfo"></a></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        
+        <img class="map" id="mercatorImg" src="maps/Mercator_projection_SW.jpg">
+        
+	</body>
+</html>

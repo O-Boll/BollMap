@@ -1,0 +1,139 @@
+﻿/*
+This file is part of BollMap.
+
+Copyright 2018 Olle Eriksson
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+
+
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background: #333333;
+    font-family: Tahoma, sans-serif;
+    font-size: 1em;
+}
+
+#toolbox {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    z-index: 3;
+    background: #EEEEEE;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+    border: 1px solid #000000;
+    box-shadow: 2px 2px #000000;
+    cursor: move;
+}
+
+#toolbox:hover {
+    opacity: 1;
+}
+
+.tool {
+    display: block;
+    width: 100%;
+    padding: 2px;
+    border: 1px solid #000000;
+}
+
+.tool:hover {
+    background: #4CAF50;
+    color: white;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0px;
+    transform: translateY(85%);
+    left: 0px;
+    width: 100%;
+    z-index: 2;
+    background: #EEEEEE;
+    opacity: 0.5;
+    transition: opacity 0.5s, transform 0.5s;
+    border: 1px solid #000000;
+}
+
+#footer:hover {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.map {
+    display: none;
+}
+
+.center {
+    text-align: center;
+}
+
+div, input, select {
+    font-family: Tahoma, sans-serif;
+    font-size: 1em;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0px;
+    margin: 0px;
+    border-top: 1px solid #CCCCCC;
+}
+
+dl {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+dt {
+    display:block;
+    float:left;
+    width:100px;
+    text-align: right;
+}
+
+dt:after {
+    padding: 0em 0.5em 0em 0em;
+    content: ':';
+}
+
+dt:nth-child(4n + 1), dt:nth-child(4n + 1) + dd {
+  background-color: #DDDDDD;
+}
+
+dd {
+    display:block;
+}
